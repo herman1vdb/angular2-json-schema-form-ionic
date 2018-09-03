@@ -29,6 +29,7 @@ export class IonicSelectComponent implements OnInit {
       this.options.titleMap || this.options.enumNames,
       this.options.enum, !!this.options.required, !!this.options.flatList
     );
+    this.selectList.splice(this.selectList.findIndex((i) => i.value === null), 1);
     this.jsf.initializeControl(this);
   }
 

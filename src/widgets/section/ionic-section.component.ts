@@ -22,7 +22,7 @@ export class IonicSectionComponent implements OnInit {
     private jsf: JsonSchemaFormService
   ) { }
 
-  get sectionTitle() {
+  sectionTitle() {
     return this.options.notitle ? null : this.jsf.setItemTitle(this);
   }
 

@@ -15,7 +15,24 @@ export class IonicRootComponent {
 
   constructor(
     private jsf: JsonSchemaFormService
-  ) { }
+  ) {}
+
+  getSectionTitle(layoutItem) {
+    try {
+      if (layoutItem.arrayItem &&
+        layoutItem.type !== '$ref' &&
+        layoutItem.arrayItemType === 'list') {
+        let propName = layoutItem.dataPointer.replace(/-/g, '').replace(/\//g, '');
+        let prop = this.jsf.schema.properties[propName];
+        if (prop && prop.items && !prop.items.notitle) {
+          return prop.items.title;
+        }
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
 
   isDraggable(node: any): boolean {
     return node.arrayItem && node.type !== '$ref' &&

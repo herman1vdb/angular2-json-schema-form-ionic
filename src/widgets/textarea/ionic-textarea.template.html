@@ -1,4 +1,4 @@
-<ion-item>
+<ion-item [color]="options?.ionic?.color" [attr.no-lines]="options?.ionic?.noLines ? '' : null">
     <ion-label
         *ngIf="options?.title"
         [attr.for]="'control' + layoutNode?._id"
@@ -19,7 +19,7 @@
         [attr.required]="options?.required"
         [ngClass]="options?.fieldHtmlClass || ''"
         [id]="'control' + layoutNode?._id"
-        (blur)="updateValue($event)"
+        (ionBlur)="updateValue($event)"
     >
     </ion-textarea>
 </ion-item>

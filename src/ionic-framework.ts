@@ -29,6 +29,7 @@ export class IonicFramework extends Framework {
     'toggle':          IonicToggleComponent,
     'select':          IonicSelectComponent,
     'text':            IonicInputComponent,
+    'number':          IonicInputComponent,
     'textarea':        IonicTextareaComponent,
     'tabs':            IonicTabsComponent,
     'submit':          'button'

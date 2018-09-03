@@ -1,10 +1,12 @@
 <ion-list-header
-    *ngIf="sectionTitle"
+    *ngIf="sectionTitle()"
     [ngClass]="options?.labelHtmlClass || ''"
-    [innerHTML]="sectionTitle">
+    [innerHTML]="sectionTitle()"
+    [color]="options?.ionic?.color"
+    [attr.no-lines]="options?.ionic?.noLines ? '' : null">
 </ion-list-header>
-<ion-item>
-    <ion-list *ngIf="containerType === 'div'" [ngClass]="options?.htmlClass || ''">
+<ion-item [color]="options?.ionic?.color" [attr.no-lines]="options?.ionic?.noLines ? '' : null">
+    <ion-list *ngIf="containerType === 'div'" [ngClass]="options?.htmlClass || ''" [color]="options?.ionic?.color" [attr.no-lines]="options?.ionic?.noLines ? '' : null">
         <ionic-root-widget
             [dataIndex]="dataIndex"
             [layout]="layoutNode.items"
@@ -12,7 +14,7 @@
             [isOrderable]="options?.orderable">
         </ionic-root-widget>
     </ion-list>
-    <ion-list *ngIf="containerType === 'fieldset'" [ngClass]="options?.htmlClass || ''">
+    <ion-list *ngIf="containerType === 'fieldset'" [ngClass]="options?.htmlClass || ''" [color]="options?.ionic?.color" [attr.no-lines]="options?.ionic?.noLines ? '' : null">
         <div *ngIf="options?.messageLocation !== 'bottom'">
             <p
                 *ngIf="options?.description"

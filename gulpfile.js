@@ -125,7 +125,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See "name" in https://rollupjs.org/#core-functionality
-      name: 'angular2-json-schema-form-ionic',
+      name: 'herman1vdb-angular2-json-schema-form-ionic',
 
       // See "globals" in https://rollupjs.org/#core-functionality
       globals: {
@@ -133,7 +133,7 @@ gulp.task('rollup:umd', function () {
       }
 
     }))
-    .pipe(rename('angular2-json-schema-form-ionic.umd.js'))
+    .pipe(rename('herman1vdb-angular2-json-schema-form-ionic.umd.js'))
     .pipe(gulp.dest(distFolder));
 });
 

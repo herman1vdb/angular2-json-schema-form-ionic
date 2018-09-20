@@ -1,11 +1,11 @@
 {
-  "name": "angular2-json-schema-form-ionic",
-  "version": "0.13.0",
+  "name": "herman1vdb-angular2-json-schema-form-ionic",
+  "version": "0.13.1",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
     "docs": "npm run docs:build",
-    "docs:build": "compodoc -p tsconfig.json -n angular2-json-schema-form-ionic -d docs --hideGenerator",
+    "docs:build": "compodoc -p tsconfig.json -n herman1vdb-angular2-json-schema-form-ionic -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jessehon/angular2-json-schema-form-ionic"
+    "url": "https://github.com/herman1vdb/angular2-json-schema-form-ionic"
   },
   "author": {
     "name": "Jesse Hon",
